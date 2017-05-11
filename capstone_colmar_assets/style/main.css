@@ -1,0 +1,48 @@
+* {
+  border: 1px dashed pink;
+}
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  /*color: ;  */
+}
+
+.container {
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+/*Navigation*/
+nav{
+  width: 100%;
+  background-color: ;
+  border-bottom: 1px solid gray;
+}
+
+#navigation {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+}
+
+#navigation ul{
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+
+/*Hero section*/
+#hero-section {
+  display: flex;
+}
+
+.hero-picture {
+  width:60%;
+}
+
+.hero-picture img {
+  width: 100%;
+}
