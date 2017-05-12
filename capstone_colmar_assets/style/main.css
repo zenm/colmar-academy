@@ -7,7 +7,6 @@ html {
 
 body {
   font-family: 'Roboto', sans-serif;
-  /*color: ;  */
 }
 
 .container {
@@ -77,6 +76,7 @@ nav{
 
 .side-info-picture{
   width: 9.253125rem;
+  flex: 0 0 auto;
 }
 
 .side-info-picture img{
@@ -84,7 +84,6 @@ nav{
 }
 
 /*start learning section*/
-
 
 #start-section h2,
 #start-section .tile-area{
@@ -94,6 +93,8 @@ nav{
 #start-section .tile-area{
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
+  /*align-items: center;*/
 }
 
 .card {
@@ -112,6 +113,8 @@ nav{
 #thesis-section {
   display: flex;
 }
+
+
 #thesis-section video{
   display: inline-block;
   width: 100%;
