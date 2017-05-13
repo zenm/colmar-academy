@@ -6,7 +6,7 @@ html {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Lato','Rubik','Roboto', sans-serif;
 }
 
 .container {
@@ -18,12 +18,60 @@ body {
   text-align: center;
 }
 
+h2 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+p {
+  font-size: .75rem;
+}
+.hero-picture {
+  width: 60%;
+  margin: 2rem 1.5rem;
+}
+
+.hero-picture img {
+  width: 100%;
+
+}
+
+/*.margin {
+  margin: 2rem 0 2rem 0rem;
+}*/
+
+
+
+
 /*Navigation*/
 nav{
   width: 100%;
   background-color: ;
   border-bottom: 1px solid gray;
 }
+
+#navigation img{
+  font-size: 1.5rem;
+  margin-left: 1.5rem;
+}
+.logo {
+  font-size: 1.15rem;
+  font-family: 'Lato', sans-serif;
+}
+#navigation .logo-color-dark {
+  color: #393939;
+  font-weight: bold;
+}
+
+#navigation .logo-color {
+  color: #898989;
+  font-weight: medium;
+}
+
 
 #navigation {
   height: 4rem;
@@ -37,57 +85,83 @@ nav{
   align-items: center;
 }
 
-.hero-picture {
-  min-width: 60%;
+#navigation li{
+  margin: 0 .5rem;
 }
-
-.hero-picture img {
-  width: 100%;
+#navigation li a{
+  text-decoration: none;
+  color: #393939;
 }
 
 
 /*Hero section*/
+
 #hero-section {
   display: flex;
+  /*flex-flow: row wrap;*/
 }
+
+
 
 .cta {
   display: flex;
-  flex-direction: column;
+  flex-flow: column wrap;
   justify-content: center;
+  flex: 0 0 auto;
+  margin: 0 1rem 0 1rem;
+  width: 30%;
 }
+
 
 /* [ ] add animation on hover of call to action*/
 
 /*about section*/
 #about-section{
-  display: flex;
+ display: flex;
+ flex-direction: row;
+ justify-content: flex-start;
 }
 
-.side-info-area{
-  min-width: 26.4375rem;
+
+#about-section .side-info-area{
+  width: 26.4375rem;
+  border-left: 1px solid gray;
 }
 
-.side-info-card{
+#about-section .side-info-card{
   display:flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-.side-info-picture{
-  width: 9.253125rem;
+#about-section .side-info-picture{
+  width: 35%;
   flex: 0 0 auto;
+  margin: 1rem;
 }
 
-.side-info-picture img{
+.side-info-card.first {
+  margin-top: 1rem;
+}
+
+.side-info-card.last{
+  /*make this gray*/
+}
+
+#about-section .side-info-picture img{
   width: 100%;
 }
 
+
+
 /*start learning section*/
 
-#start-section h2,
+
 #start-section .tile-area{
-  margin: 1rem 0;
+  margin: 1rem 0 1rem 0;
+}
+#start-section h2 {
+  margin-top: 2rem
 }
 
 #start-section .tile-area{
@@ -101,6 +175,15 @@ nav{
   width: 19rem;
   margin: 1rem;
 }
+.card h4 {
+  margin: 1rem 0 1rem 1rem;
+}
+.card p{
+  margin: .5rem 0 .5rem 1rem;
+}
+.card .description {
+  margin: 0 0 1.5rem 1rem;
+}
 
 #start-section .title-img-course{
   min-height: 13.75rem;
@@ -112,17 +195,36 @@ nav{
 /*thesis section*/
 #thesis-section {
   display: flex;
+  flex-flow: row nowrap;
+}
+
+#thesis-section.video-text{
+  width: 40%;
 }
 
 
-#thesis-section video{
-  display: inline-block;
+#thesis-section .side-info-area{
+  width: 26.4375rem;
+}
+
+#thesis-section .side-info-picture{
+  width: 35%;
+  margin: 1rem;
+}
+#thesis-section .side-info-picture img {
   width: 100%;
 }
-
-#thesis-section.side-info-card {
-  min-width:10.5rem;
+#thesis-section .side-info-card{
+  display: flex;
+  align-items: center;
+  height: 10.5rem;
+  flex: 0 0 auto;
 }
+
+#thesis-section .side-info-card first{
+  
+}
+
 
 /*footer*/
 footer {
