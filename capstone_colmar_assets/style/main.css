@@ -1,12 +1,16 @@
-* {
+/** {
   border: 1px dashed pink;
-}
+}*/
+
+/*Universal styles*/
 html {
   font-size: 16px;
 }
 
 body {
-  font-family: 'Lato','Rubik','Roboto', sans-serif;
+  font-family: 'Open Sans', 'Lato','Rubik','Roboto', sans-serif;
+  color: #393A3A;
+  line-height: 1.5rem;
 }
 
 .container {
@@ -19,8 +23,8 @@ body {
 }
 
 h2 {
-  font-size: 2rem;
-  font-weight: 900;
+  font-size: 2.1rem;
+  font-weight:700;
 }
 
 h4 {
@@ -37,13 +41,7 @@ p {
 
 .hero-picture img {
   width: 100%;
-
 }
-
-/*.margin {
-  margin: 2rem 0 2rem 0rem;
-}*/
-
 
 
 
@@ -51,7 +49,7 @@ p {
 nav{
   width: 100%;
   background-color: ;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #D9DBDB;
 }
 
 #navigation img{
@@ -99,6 +97,7 @@ nav{
 #hero-section {
   display: flex;
   /*flex-flow: row wrap;*/
+  background-color: #CFCECF;
 }
 
 
@@ -112,8 +111,25 @@ nav{
   width: 30%;
 }
 
+.cta h2{
+  margin: 1rem 0;
+  line-height: 2.5rem;
+}
 
-/* [ ] add animation on hover of call to action*/
+.cta h4 {
+  margin: 0 0 1rem 0;
+}
+
+.cta button {
+  background-color: #393A3A;
+
+}
+.cta button label {
+  display:inline-block;
+  color: #FFFFFF;
+  padding: .5rem 0;
+  font-size: 1rem;
+}
 
 /*about section*/
 #about-section{
@@ -122,10 +138,23 @@ nav{
  justify-content: flex-start;
 }
 
+#about-section .hero-picture h2{
+  margin: 2rem 0 1.5rem 0;
+}
+
+#about-section .hero-picture .quote {
+  margin: 0 0 1rem 0;
+}
+
+#about-section .hero-picture .cite {
+  font-weight: 600;
+  font-size: .75rem;
+}
 
 #about-section .side-info-area{
   width: 26.4375rem;
-  border-left: 1px solid gray;
+  border-left: 1px solid #D9DBDB;
+  border-right: 1px solid #D9DBDB;
 }
 
 #about-section .side-info-card{
@@ -140,28 +169,37 @@ nav{
   margin: 1rem;
 }
 
-.side-info-card.first {
+#about-section .side-info-card.first {
   margin-top: 1rem;
 }
 
-.side-info-card.last{
-  /*make this gray*/
+#about-section .side-info-card.second{
+  border-top: 1px solid #D9DBDB;
 }
 
-#about-section .side-info-picture img{
+#about-section .side-info-card.last{
+  background-color: #CECDCE;
+}
+
+.side-info-area .side-info-picture img{
   width: 100%;
+}
+.side-info-area .side-info-text a{
+  text-decoration: none;
+  color: #4382DC;
 }
 
 
 
 /*start learning section*/
 
+#start-section {
+  padding: 2rem 0 1rem 0;
+  background-color: #CECDCE;
+}
 
 #start-section .tile-area{
   margin: 1rem 0 1rem 0;
-}
-#start-section h2 {
-  margin-top: 2rem
 }
 
 #start-section .tile-area{
@@ -172,17 +210,18 @@ nav{
 }
 
 .card {
-  width: 19rem;
+  width: 16rem;
   margin: 1rem;
+  background-color: #FFFFFF;
 }
 .card h4 {
   margin: 1rem 0 1rem 1rem;
 }
 .card p{
-  margin: .5rem 0 .5rem 1rem;
+  margin: .5rem 1rem;
 }
 .card .description {
-  margin: 0 0 1.5rem 1rem;
+  margin: 0 1rem 1.5rem 1rem;
 }
 
 #start-section .title-img-course{
@@ -196,15 +235,32 @@ nav{
 #thesis-section {
   display: flex;
   flex-flow: row nowrap;
+  margin: 2rem 0;
 }
 
-#thesis-section.video-text{
-  width: 40%;
+#thesis-section h4{
+  margin: 1.5rem 0;
 }
 
+h2.thesis-section {
+  margin-top: 2rem;
+}
+
+#thesis-section .video-text{
+  max-width: 60%;
+  display: flex;
+  flex-flow: column wrap;
+  margin: 1rem 1rem 1.5rem 1.5rem;
+}
+.video-text video {
+  width: 100%               !important;
+  heigth: auto              !important;
+  border: 1px solid #D9DBDB;
+}
 
 #thesis-section .side-info-area{
   width: 26.4375rem;
+  flex: 0 0 auto;
 }
 
 #thesis-section .side-info-picture{
@@ -218,23 +274,33 @@ nav{
   display: flex;
   align-items: center;
   height: 10.5rem;
-  flex: 0 0 auto;
+
 }
 
-#thesis-section .side-info-card first{
-  
+#thesis-section .side-info-card.first{
+  margin-top: 1rem;
+  background-color: #CECDCE;
 }
 
 
 /*footer*/
 footer {
   width: 100%;
+  height: 5rem;
+  border-top: 1px solid #D9DBDB;
+
 }
 
-.footer {
+#footer {
   display: flex;
   justify-content: flex-end;
+  font-size: .75rem;
+  margin-top: .5rem;
 }
-.footer .copyright {
+#footer .copyright {
   margin-right: auto;
+  margin-left: 1.5rem;
+}
+#footer .terms-privacy {
+  margin: 0 .5rem;
 }
