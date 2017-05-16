@@ -90,7 +90,9 @@ p {
     text-decoration: none;
     color: #393939;
   }
-
+  #navigation li a:hover{
+    color: #DEE0E2;
+  }
 @media only screen and (min-width: 470px){
   .logo-mobile {
     display: none;
@@ -146,14 +148,20 @@ p {
 .cta button {
   background-color: #393A3A;
   border: none;
-
+  width: 100%;
+  transition: background-color .5s ease;
 }
+.cta button:hover {
+  background-color: #DEE0E2;
+}
+
 .cta button label {
   display:inline-block;
   color: #FFFFFF;
   padding: .5rem 0;
   font-size: 1rem;
 }
+
 
 @media only screen and (max-width: 470px) {
 
