@@ -1,5 +1,5 @@
 /** {
-  border: 1px dashed pink;
+  border: 1px dashed red;
 }*/
 
 /*Universal styles*/
@@ -41,77 +41,89 @@ p {
 
 .hero-picture img {
   width: 100%;
+  height: auto;
 }
 
 
 
 /*Navigation*/
-nav{
-  width: 100%;
-  background-color: ;
-  border-bottom: 1px solid #D9DBDB;
-}
 
-#navigation img{
-  font-size: 1.5rem;
-  margin-left: 1.5rem;
-}
-.logo,
-.logo-text{
-  font-size: 1.15rem;
-  font-family: 'Lato', sans-serif;
-}
-#navigation .logo-color-dark {
-  color: #393939;
-  font-weight: bold;
-}
+  nav{
+    width: 100%;
+    background-color: ;
+    border-bottom: 1px solid #D9DBDB;
+  }
 
-#navigation .logo-color {
-  color: #898989;
-  font-weight: medium;
-}
+  #navigation img{
+    font-size: 1.5rem;
+    margin-left: 1.5rem;
+  }
+  .logo,
+  .logo-text{
+    font-size: 1.15rem;
+    font-family: 'Lato', sans-serif;
+  }
+  #navigation .logo-color-dark {
+    color: #393939;
+    font-weight: bold;
+  }
+
+  #navigation .logo-color {
+    color: #898989;
+    font-weight: medium;
+  }
 
 
-#navigation {
-  height: 4rem;
-  display: flex;
-  align-items: center;
-}
+  #navigation {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+  }
 
-#navigation ul{
-  display: flex;
-  margin-left: auto;
-  align-items: center;
-}
+  #navigation ul{
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+  }
 
-#navigation li{
-  margin: 0 .5rem;
-}
-#navigation li a{
-  text-decoration: none;
-  color: #393939;
-}
+  #navigation li{
+    margin: 0 .5rem;
+  }
+  #navigation li a{
+    text-decoration: none;
+    color: #393939;
+  }
 
-@media only screen and (min-width: 700px){
-  .logo-mobile{
+@media only screen and (min-width: 470px){
+  .logo-mobile {
     display: none;
   }
 }
 
-/*@media only screen
-  and (min-device-width: 320px)
-  and (max-device-width: 480px) {
+@media only screen and (max-width: 470px){
+  .menu-text,
+  .logo-text {
+    display: none;
+  }
 
-  }*/
+  #navigation img{
+    margin: 0 auto;
+  }
+  .cta{
+    display: flex;
+    width: 100%;
+  }
 
+}
 
 
 /*Hero section*/
 
 #hero-section {
   display: flex;
-  /*flex-flow: row wrap;*/
+  flex-flow: row nowrap;
   background-color: #CFCECF;
+  max-width: 100%;
 }
 
 
@@ -146,6 +158,42 @@ nav{
   font-size: 1rem;
 }
 
+@media only screen and (max-width: 470px) {
+  #hero-section {
+    display: inline-block;
+  }
+
+  #hero-section .hero-picture{
+    margin:0;
+    height: 11.25rem;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  #hero-section .cta{
+    display: inline-block;
+    width: 90%; /*hack this to 90%???? */
+    /*margin: 0 1rem 0 1rem;*/
+  }
+
+  #hero-section .cta h2{
+    display: inline-block;
+    margin: 2rem 0;
+    width: 100%;
+  }
+
+  #hero-section .cta h4{
+    margin-bottom: 1.5rem;
+  }
+  #hero-section button {
+    width: 90%;
+    background-color: #898989;
+    margin-bottom: 2rem;
+  }
+}
+
+
+
 /*about section*/
 #about-section{
  display: flex;
@@ -176,6 +224,7 @@ nav{
   display:flex;
   justify-content: flex-start;
   align-items: center;
+  width: 100%;
 }
 
 #about-section .side-info-picture{
@@ -204,17 +253,79 @@ nav{
   color: #4382DC;
 }
 
+@media only screen and (min-width:470px){
+  .side-info-picture .mobile{
+    display:none;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .about-section.hero-picture {
+  display: none;
+  }
+
+  #about-section .side-info-picture .desktop{
+    display: none;
+  }
+
+  #about-section .side-info-card.first{
+    margin: 0;
+  }
+
+  #about-section .side-info-area{
+    min-width: 100%;
+  }
+
+  #about-section .side-info-card{
+    display: inline-block;
+    width: 100%;
+  }
+
+  #about-section .side-info-picture {
+      width: auto;
+      height: 100%
+  }
+
+  #about-section .side-info-picture .mobile{
+    width: 100%;
+  }
+
+  #about-section .side-info-text {
+    width: 100%
+    margin: 1rem;
+  }
+  #about-section .side-info-text h4,
+  #about-section .side-info-text p {
+    margin: 0 2rem;
+  }
+
+  #about-section .side-info-card {
+    background-color: #F0F2F2 !important;
+  }
+
+  #about-section .side-info-card.last {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #D9DBDB;
+    }
 
 
-/*start learning section*/
+  #about-section .side-info-card.second{
+    border: 0;
+  }
+}
+
 
 #start-section {
+  background-color: #E5E6E7;
+}
+
+#start-section h2{
   padding: 2rem 0 1rem 0;
-  background-color: #CECDCE;
 }
 
 #start-section .tile-area{
   margin: 1rem 0 1rem 0;
+
 }
 
 #start-section .tile-area{
@@ -246,11 +357,59 @@ nav{
   width: 100%;
 }
 
+@media only screen and (max-width: 470px) {
+
+  #start-section {
+    padding-bottom: 1.5rem;
+    background-color: #F0F2F2;
+  }
+
+  #start-section h2{
+    margin: 0;
+  }
+  #start-section .card {
+    margin: .5rem;
+    background-color: #CFCFCF;
+    width: 100%;
+  }
+  #start-section .tile-area {
+    margin-top: 0;
+  }
+
+  #start-section .tile-area .card p,
+  #start-section .title-img-course img,
+  #start-section .title-img-course p {
+    display: none;
+  }
+
+  #start-section .title-img-course {
+    display: inline-block;
+    min-height:auto !important;
+    margin: 0;
+  }
+
+  #start-section .title{
+    display: inline-block;
+    height: auto;
+    width: 100%;
+    background: #CFCFCF;
+  }
+  .card h4 {
+    margin:0;
+    padding: 1rem 0 1rem 1rem;
+  }
+
+
+}
+/*end start section*/
+
+
+
 /*thesis section*/
 #thesis-section {
   display: flex;
-  flex-flow: row nowrap;
-  margin: 2rem 0;
+  /*flex-flow: row nowrap;*/
+  /*margin: 2rem 0;*/
 }
 
 #thesis-section h4{
@@ -259,10 +418,11 @@ nav{
 
 h2.thesis-section {
   margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 #thesis-section .video-text{
-  max-width: 60%;
+  width: 60%;
   display: flex;
   flex-flow: column wrap;
   margin: 1rem 1rem 1.5rem 1.5rem;
@@ -274,27 +434,51 @@ h2.thesis-section {
 }
 
 #thesis-section .side-info-area{
-  width: 26.4375rem;
-  flex: 0 0 auto;
+  max-width: 26.4375rem;
+  /*flex: 0 0 auto;*/
+}
+
+
+#thesis-section .side-info-card{
+  display: flex;
+  align-items: center;
+  height: 10.5rem;
 }
 
 #thesis-section .side-info-picture{
   width: 35%;
   margin: 1rem;
 }
+
 #thesis-section .side-info-picture img {
   width: 100%;
-}
-#thesis-section .side-info-card{
-  display: flex;
-  align-items: center;
-  height: 10.5rem;
-
 }
 
 #thesis-section .side-info-card.first{
   margin-top: 1rem;
   background-color: #CECDCE;
+}
+
+@media only screen and (max-width: 470px) {
+  #thesis-section .video-text h4,
+  #thesis-section .video-text .video-description,
+  #thesis-section .side-info-area {
+    display: none;
+  }
+
+
+  #thesis-section .video-text{
+    display: inline-block;
+    margin: 0;
+    min-width: 100% !important;
+  }
+  #thesis-section video {
+    width: 100% !important ;
+    height: auto !important;
+  }
+  h2.thesis-section {
+    margin-bottom: 2rem;
+  }
 }
 
 
@@ -303,7 +487,6 @@ footer {
   width: 100%;
   height: 5rem;
   border-top: 1px solid #D9DBDB;
-
 }
 
 #footer {
@@ -318,4 +501,21 @@ footer {
 }
 #footer .terms-privacy {
   margin: 0 .5rem;
+}
+@media only screen and (max-width: 470px) {
+  footer {
+    display: inline-block;
+    margin:0;
+    height: auto;
+    width: 100%;
+  }
+  #footer .terms-privacy{
+    display: none;
+  }
+  #footer {
+    margin: 0;
+  }
+  #footer span{
+    margin: 1rem 0;
+  }
 }
